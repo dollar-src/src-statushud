@@ -24,7 +24,7 @@ end)
 RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function()
 
     loaded = true
-    print(loaded)
+  
     QBCore.Functions.GetPlayerData(function(PlayerData)
       
         PlayerJob = PlayerData.job
@@ -50,10 +50,10 @@ Citizen.CreateThread(function()
 
 
     Wait(100)
-
+    if loaded then
     QBCore.Functions.TriggerCallback("src-hudv2:getaccount", function(result)
 
-        if loaded then
+      
 
 
     SendNUIMessage({
@@ -68,9 +68,9 @@ Citizen.CreateThread(function()
 
 
       })
-    end
+   
     end)
-
+end
 end
 
 
